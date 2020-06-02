@@ -2,31 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\categorie;
+use App\Categorie;
 use Illuminate\Http\Request;
 
 class CategorieController extends Controller
 {
-    public function idée()
-    {
-        return view('Catégo_idées');
-    }
-   /* public function idée()
-    {
-        return view('CatégorieTab');
-    }*/
-    public function sport()
-    {
-        return view('sports');
-    }
-    public function santé()
-    {
-        return view('santés');
-    }
+    
+   
     public function index()
     {
         $Caté =  Categorie::all();
-        return view('Catégo_idées',compact('Caté'));
+        return view('Catégorie.Catégo_idées',compact('Caté'));
     }
     /*public function show($id)
     {
