@@ -37,29 +37,22 @@
                
               <thead>
               <tr>  <th>Id</th>
-                   <th>Titre</th>				   
-                   <th>Contenue</th>
-                   <th>Date</th>
-                   <th>Images</th>
-                   <th>Videos</th>
-                  <th>Action</th>  
+                   <th>Titre</th>	
+                   <th>Catégories</th>
+                    <th>Date</th>
+                   <th>Action</th>  		
               </tr>
+             
               </thead>
                     <tbody>
                       @foreach($Pub as $key => $value)
                     <tr> 
                       <td> {{$value->id}}  </td>					
                       <td >  {{$value->Titre}} </td>
-                      <td> {{$value->Contenue}}  </td>	
-                      <td> {{$value->Catégories}}  </td>	                    	
-                      <td> {{$value->lien}}  </td>	
-                      <td> {{$value->Images}}  </td>
-                      <td> {{$value->Videos}}  </td>
-                      <td> {{$value->Date}}  </td>	
-                      
-                      <td class="project-actions text-right">
-                        <a  class="btn btn-primary btn-sm" href="#">
-                           
+                      <td> {{$value->Catégories}}  </td>
+                      <td> {{$value->Date}}  </td>
+                      <td class="project-actions text-left">
+                        <a  class="btn btn-primary btn-sm" href="#">  
                           <i class="fas fa-eye">
                             </i>
                             View
@@ -75,10 +68,7 @@
                             Delete
                         </a>
                     </td>
-           
-            
-                    </tr>  
-                    @endforeach 
+                    </tr>   @endforeach 
                   </tbody>
                    
                         
@@ -91,3 +81,14 @@
 </div>
 <!-- /.content -->
 @endsection
+ <!--    
+                   <th>Contenue</th>
+                  
+                   <th>Images</th>
+                   <th>Videos</th>-->
+                  
+                     <!--  <td> {{$value->Contenue}}  </td>	
+                     	                    	
+                      <td> {{$value->lien}}  </td>	
+                      <td> {{$value->Images}}  </td>
+                      <td> {{$value->Videos}}  </td>--> 
