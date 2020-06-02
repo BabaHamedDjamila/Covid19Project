@@ -58,8 +58,9 @@
                       <td> {{$value->Date}}  </td>	
                       
                       <td class="project-actions text-right">
-                        <a class="btn btn-primary btn-sm" href="#">
-                            <i class="fas fa-folder">
+                        <a  class="btn btn-primary btn-sm" href="#">
+                           
+                          <i class="fas fa-eye">
                             </i>
                             View
                         </a>

@@ -195,7 +195,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./signalements" class="nav-link">
+                <a href="./signalement" class="nav-link">
                  &nbsp;<i class="far fa-bell"></i>
 				     &nbsp;
                   <p>   Signalements</p>

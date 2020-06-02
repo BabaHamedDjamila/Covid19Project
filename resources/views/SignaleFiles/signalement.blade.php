@@ -31,7 +31,7 @@
               <div class="card-header border-transparent">
                 <h3 class="card-title">
                   <i class=""></i>
-                  La listes des signalements  
+                  La liste des signalements  
                 </h3>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -51,76 +51,44 @@
                     <tr>
                       <th>ID</th>
                       <th>Titre</th>
-					   <th>Description</th>
+					  
                       <th>Status</th>
-					   <th>Localisation</th>
-					    <th>Image</th>					
+					   <th>Date</th>
+            
                       <th>Anonyme/utilisateur</th>
+                      <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Call of Duty IV</td>
-					  <td>La salle des fetes X est ouverte</td>
-                      <td><span class="badge badge-success">Accéptée</span></td>
-                      <td>
-                       Tlemcen   </td>
-					   <td>
-					    <img src="dist/img/default-150x150.png" alt="Images 1" class="img-circle img-size-32 mr-2">
-                      Some Images
-					  </td>
-					  <td>
-					  Anonyme 
-					  </td>
-                    </tr>
-                    <tr>
-                       <td>2</td>
-                      <td>Une salle des fetes qui travail</td>
-					  <td>La salle des fetes X est ouverte malgrés que c'est interdis </td>
-                      <td><span class="badge badge-success">Accéptée</span></td>
-                      <td>
-                       Tlemcen   </td>
-					   <td>
-					    <img src="dist/img/default-150x150.png" alt="Images 1" class="img-circle img-size-32 mr-2">
-                      Some Images
-					  </td>
-					  <td>
-					  Anonyme 
-					  </td>
-                    </tr>
-                    <tr>
-                       <td>3</td>
-                      <td>Une salle des fetes qui travail</td>
-					  <td>La salle des fetes X est ouverte malgrés que c'est interdis </td>
-                      <td><span class="badge badge-danger">Refusé</span></td>
-                      <td>
-                       Tlemcen   </td>
-					   <td>
-					    <img src="dist/img/default-150x150.png" alt="Images 1" class="img-circle img-size-32 mr-2">
-                      Some Images
-					  </td>
-					  <td>
-					  Anonyme 
-					  </td>
-                    </tr>
-                    <tr>
-                     <td>4</td>
-                      <td>Une salle des fetes qui travail</td>
-					  <td>La salle des fetes X est ouverte malgrés que c'est interdis </td>
-                    
-                      <td><span class="badge badge-info">En attente</span></td>
-                     <td>
-                       Tlemcen   </td>
-					   <td>
-					    <img src="dist/img/default-150x150.png" alt="Images 1" class="img-circle img-size-32 mr-2">
-                      Some Images
-					  </td>
-					  <td>
-					  Anonyme 
-					  </td> 
-                    </tr>
-                   
+                      @foreach($signale as $key => $value)
+                      <tr> 
+                        <td> {{$value->id}}  </td>					
+                        <td >  {{$value->Titre}} </td>                     	
+                        <td> {{$value->Status}}  </td>	                    	                 
+                        <td> {{$value->Date}}  </td>	
+                        <td> {{$value->AnonyUtilisateur}}  </td>	
+                        
+                        
+                        <td class="project-actions text-right">
+                          <a  class="btn btn-primary btn-sm" href="#">
+                             
+                            <i class="fas fa-eye">
+                              </i>
+                              View
+                          </a>
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>  
+                      @endforeach   
                     </tbody>
                   </table>
                 </div>
@@ -128,7 +96,7 @@
               </div>
               <!-- /.card-body -->
               <div class="card-footer clearfix">
-                <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Ajouter le signalement</a>
+               
                 <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">Voir tous les signalements</a>
               </div>
               <!-- /.card-footer -->

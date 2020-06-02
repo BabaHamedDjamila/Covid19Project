@@ -46,22 +46,26 @@
                   <tbody>
                     @foreach($Caté as $key => $value)
                   <tr> <td> {{$value->id}}  </td>					
-                    <td > <a href="#" style=max_length:'10' ;>
+                    <td > <a href="#" >
                        {{$value->Catégories}}
 					</td>                   
-					<td>
-            <a class="btn btn-info btn-sm" href="{{route('Catégorie.show',$value->id)}}">
-             
-              <i class="fas fa-eye" class="glyphicon glyphicon-th-large"></i></a>
-          <a class="btn btn-primary btn-sm" href="{{route('Catégorie.edit',$value->id)}}">
-            <i class="fas fa-pen"></i>
-           
-              <i class="glyphicon glyphicon-pencil"></i></a>
-<form action="{{route('Catégorie.destroy',$value->id)}}" method= "post">
-  @csrf 
-             
-  <button type="submit" style="display: inline;" class="btn btn-danger btn-sm">
-    <i class="fas fa-trash-alt"></i><i class="glyphicon glyphicon-trash"></i></button>
+          <td class="project-actions text-right">
+            <a  class="btn btn-primary btn-sm" href="#">
+               
+              <i class="fas fa-eye">
+                </i>
+                View
+            </a>
+            <a class="btn btn-info btn-sm" href="#">
+                <i class="fas fa-pencil-alt">
+                </i>
+                Edit
+            </a>
+            <a class="btn btn-danger btn-sm" href="#">
+                <i class="fas fa-trash">
+                </i>
+                Delete
+            </a>
         
          
 					</td>
