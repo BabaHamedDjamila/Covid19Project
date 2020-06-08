@@ -43,3 +43,28 @@ Route::get('/publications', 'PublicationController@publication')->name('publicat
 //Route::resource('Catégorie','CategorieController');
 //Route::resource('IdeesFiles','IdeeController');
 //Route::resource('SignaleFiles','SignaleController');
+
+Route::get('/Acceuille', function () {
+    return view('usercovid.Acceuille');
+});
+Route::get('/idée', function () {
+    return view('usercovid.idée');
+});
+Route::get('/idée_2', function () {
+    return view('usercovid.idée_2');
+});
+Route::get('/informer', function () {
+    return view('usercovid.informer');
+});
+Route::get('/je dénonce', function () {
+    return view('usercovid.je dénonce');
+});
+Route::get('/inscrire', function () {
+    return view('usercovid.inscrire');
+});
+Route::get('/login', function () {
+    return view('usercovid.login');
+});
+Route::get('/statistics', function () {
+    return view('usercovid.statistics');
+});

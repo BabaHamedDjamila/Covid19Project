@@ -37,10 +37,10 @@
     <aside id="colorlib-aside" role="complementary" class="js-fullheight">
       <nav id="colorlib-main-menu" role="navigation">
         <ul>
-         <li><a href="Acceuille.html">Acceuille</a></li>
+          <li><a href="Acceuille.html">Acceuille</a></li>
           <li><a href="idée.html">J'ai une idée</a></li>
           <li><a href="informer.html">informer</a></li>
-          <li class="colorlib-active"><a href="s'inscrire.html">S'inscrire</a></li>
+          <li class="colorlib-active"><a href="inscrire.html">S'inscrire</a></li>
           <li><a href="je dénonce.html">Je Dénonce</a></li>
         </ul>
       </nav>
@@ -61,19 +61,17 @@
 <div class="col-md-6">
 <div class="card">
 <header class="card-header">
-  <a href="login.html" class="float-right btn btn-outline-primary mt-1">Log in</a>
+ 
   <h4 class="card-title mt-2">Sign up</h4>
 </header>
 <article class="card-body">
 <form>
   <div class="form-row">
     <div class="col form-group">
-      <label>Nom</label>   
-        <input type="text" class="form-control" placeholder="">
+    
     </div> <!-- form-group end.// -->
     <div class="col form-group">
-      <label>Prénom</label>
-        <input type="text" class="form-control" placeholder=" ">
+      
     </div> <!-- form-group end.// -->
   </div> <!-- form-row end.// -->
   <div class="form-group">
@@ -81,63 +79,24 @@
     <input type="email" class="form-control" placeholder="">
   </div> <!-- form-group end.// -->
   <div class="form-group">
-      <label class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="sex" value="option1">
-      <span class="form-check-label"> Homme </span>
-    </label>
-    <label class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="sex" value="option2">
-      <span class="form-check-label"> Femme</span>
-    </label>
+      
   </div> <!-- form-group end.// -->
     
     <div class="form-group col-md-6">
-      <label>Wilaya</label>
-     <select id="inputWilaya" class="form-control">
-        <option>Adrar</option>
-          <option>Oran</option>
-          <option>Alger</option>
-          <option>Tlemcen</option>
-          <option>Mostaganem</option>
-          <option>Tiaret</option>
-      </select>    </div> <!-- form-group end.// -->
+       </div> <!-- form-group end.// -->
   <!-- form-row.// -->
 <div class="form-row">
     <div class="col form-group">
-      <label>Profession</label>   
-        <input type="text" class="form-control"  placeholder=" ">
+     
     </div> <!-- form-group end.// -->
     <div class="col form-group">
-      <label>Maladie</label>
-        <input type="text" class="form-control" id="myInput" placeholder=" ">
-        
-         <br>
-  <ul class="list-group" id="myList"  >
- 
-    <li class="list-group-item" style="display: none; "><a href="#">diabète</a></li>
-    <li class="list-group-item"style="display:none;"><a href="#">l’asthme</a></li>
-    <li class="list-group-item"style="display:none;"><a href="#">l’épilepsie</a></li>
-    <li class="list-group-item"style="display:none;"><a href="#">l’hypertension</a></li>
-    <li class="list-group-item"style="display:none;"><a href="#">L’insuffisance cardiaque</a></li>
-    <li class="list-group-item"style="display:none;"><a href="#">L’insuffisance rénale</a></li>
-    <li class="list-group-item"style="display:none;"><a href="#">polyarthrite rhumatoïde</a></li>
-    <li class="list-group-item"style="display:none;"><a href="#">sclérose en plaques</a></li>
-  </ul>  
-  </select>
+      
     </div> <!-- form-group end.// -->
   </div> <!-- form-row end.// -->
 
   <div class="form-group input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-    </div>
-    <select class="custom-select" style="max-width: 80px;">
-        <option selected="">+971</option>
-        <option value="1">+972</option>
-        <option value="2">+198</option>
-        <option value="3">+701</option>
-    </select>
-      <input name="" class="form-control" placeholder="Phone number" type="text">
+      
+    
     </div> <!-- form-group// -->
 
   <div class="form-group input-group">
@@ -147,17 +106,14 @@
         <input class="form-control" placeholder="Creer mot de passe" type="password">
     </div> <!-- form-group// -->
     <div class="form-group input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-    </div>
-        <input class="form-control" placeholder="Repeter le mot de passe" type="password">
+    
     </div> <!-- form-group// -->              
     <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block"> S'enregistrer  </button>
+        <button type="submit" class="btn btn-primary btn-block"> LogIn </button>
     </div> <!-- form-group// -->                                 
 </form>
 </article> <!-- card-body end .// -->
-<div class="border-top card-body text-center">T'as déja un compte? <a href="login.html">Log In</a></div>
+<div class="border-top card-body text-center">T'as pas un compte? <a href="inscrire.html">inscrire</a></div>
 </div> <!-- card.// -->
 </div> <!-- col.//-->
 
@@ -189,18 +145,5 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
     
-
-<script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $(".list-group li").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>
-
-
   </body>
 </html>

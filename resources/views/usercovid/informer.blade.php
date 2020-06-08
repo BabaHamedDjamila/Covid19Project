@@ -244,7 +244,7 @@ span:active {
 					<li><a href="Acceuille.html">Acceuille</a></li>
 					<li><a href="idée.html">J'ai une idée</a></li>
 					<li class="colorlib-active"><a href="informer.html">informer</a></li>
-					<li><a href="s'inscrire.html">S'inscrire</a></li>
+					<li><a href="inscrire.html">S'inscrire</a></li>
 					<li><a href="je dénonce.html">Je Dénonce</a></li>
 				</ul>
 			</nav>
