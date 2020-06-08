@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('admincovid.welcome');
 });
 
+
 Auth::routes(); 
 Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('/Catégo_idées', 'CategorieController@idée')->name('Catégo_idées');
@@ -62,8 +63,8 @@ Route::get('/je dénonce', function () {
 Route::get('/inscrire', function () {
     return view('usercovid.inscrire');
 });
-Route::get('/login', function () {
-    return view('usercovid.login');
+Route::get('/log in', function () {
+    return view('usercovid.log in');
 });
 Route::get('/statistics', function () {
     return view('usercovid.statistics');
