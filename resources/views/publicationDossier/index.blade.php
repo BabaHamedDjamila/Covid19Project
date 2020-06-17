@@ -51,22 +51,27 @@
                       <td >  {{$value->Titre}} </td>
                       <td> {{$value->Catégories}}  </td>
                       <td> {{$value->Date}}  </td>
-                      <td class="project-actions text-left">
-                        <a  class="btn btn-primary btn-sm" href="#">  
+                      <td class="project-actions text-left" class="table-buttons" >
+                            <a  class="btn btn-primary btn-sm" href="{{route('publicationDossier.show',$value->id) }}">
                           <i class="fas fa-eye">
                             </i>
                             View
                         </a>
-                        <a class="btn btn-info btn-sm" href="#">
+                        <a class="btn btn-info btn-sm" href="{{route('publicationDossier.edit',$value->id)}}"">
                             <i class="fas fa-pencil-alt">
                             </i>
                             Edit
                         </a>
-                        <a class="btn btn-danger btn-sm" href="#">
-                            <i class="fas fa-trash">
-                            </i>
-                            Delete
-                        </a>
+                 
+<form method="POST" action="{{ route('publicationDossier.destroy', $value->id) }}">
+ 
+  @csrf
+  @method('DELETE')
+  <a class="btn btn-danger btn-sm" >
+  <i class="fas fa-trash"></i>
+  Delete
+     </button>
+ </form>
                     </td>
                     </tr>   @endforeach 
                   </tbody>
@@ -81,14 +86,3 @@
 </div>
 <!-- /.content -->
 @endsection
- <!--    
-                   <th>Contenue</th>
-                  
-                   <th>Images</th>
-                   <th>Videos</th>-->
-                  
-                     <!--  <td> {{$value->Contenue}}  </td>	
-                     	                    	
-                      <td> {{$value->lien}}  </td>	
-                      <td> {{$value->Images}}  </td>
-                      <td> {{$value->Videos}}  </td>--> 
