@@ -46,6 +46,17 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'citoyens',
+        ],
+
+        'citoyen-api' => [
+            'driver' => 'token',
+            'provider' => 'citoyens',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -69,6 +80,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        'citoyens' => [
+            'driver' => 'eloquent',
+            'model' => App\Citoyen::class,
         ],
 
         // 'users' => [
@@ -95,6 +110,12 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'citoyens' => [
+            'provider' => 'citoyens',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

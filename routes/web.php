@@ -21,6 +21,8 @@ Route::get('/', function () {
 Auth::routes(); 
 Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('/Catégo_idées', 'CategorieController@idée')->name('Catégo_idées');
+//Route::get('/citoyen', 'CitoyenController@index')->name('citoyen');
+
 Route::get('Catégo_idées', 'CategorieController@index')->name('Catégo_idées');
 //Route::get('Catégorie.show', 'CategorieController@show')->name('Catégorie.show');
 //Route::get('Catégorie.edit', 'CategorieController@show')->name('Catégorie.edit');
